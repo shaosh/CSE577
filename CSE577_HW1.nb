@@ -1,0 +1,119 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4525,        110]
+NotebookOptionsPosition[      4161,         93]
+NotebookOutlinePosition[      4504,        108]
+CellTagsIndexPosition[      4461,        105]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "CSE 577 Computer Aided Geometric Design\nFall 2013\nInstructor: G. Farin\n",
+ StyleBox["Student:",
+  FontWeight->"Bold"],
+ " "
+}], "Subtitle",
+ CellChangeTimes->{{3.5884595312679095`*^9, 3.588459575729596*^9}, {
+  3.588459613949663*^9, 3.588459654587734*^9}, {3.588460718447203*^9, 
+  3.5884607247964144`*^9}}],
+
+Cell[TextData[{
+ StyleBox["Homework 1: Font Design with Bezier Curves",
+  FontWeight->"Bold"],
+ "\nDue: Monday, September 30, by midnight\n"
+}], "Subsubtitle",
+ CellChangeTimes->{{3.5884596699225616`*^9, 3.5884596876285925`*^9}, {
+  3.588459734678275*^9, 3.588459775019946*^9}, {3.5884598381376567`*^9, 
+  3.58845984536047*^9}}],
+
+Cell[TextData[{
+ "\nPostscript is a language used by printers. In Postscript, fonts are \
+defined as Bezier curves.This continuous definition, rather than a pixel map \
+definition, allows the fonts to be scaled while preserving their quality.\nIn \
+this assignment, you will design your own font.You must design two distinct \
+characters, for example your initials, with Bezier curves.\n\n",
+ StyleBox["Goals:",
+  FontWeight->"Bold"],
+ "\n-- Develop an understanding of the basic properties of Bezier curves, and \
+in particular, how a Bezier curve mimics the shape of its polygon.\n -- \
+Develop an understanding of the de Casteljau algorithm and be able to compute \
+a point on the curve.\n \n ",
+ StyleBox["Details:",
+  FontWeight->"Bold"],
+ "\n -- Be creative! The characters you design should be interesting and \
+curvey. The characters must be block characters -- there must be an inside.\n \
+-- You must use at least four different degrees of Bezier curves, for \
+example, degree 1,2,3,4.\n -- When you plot a control polygon, the endpoints \
+must be distinguishable from the interior control points, e.g., you could \
+make the endpoints larger. \n -- The linewidth of the polygon should be \
+thinner than that of the curve. \n -- It is fine to use ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "\[CloseCurlyQuote]s BezierCurve routine for the polygon and curve plot.\n \
+-- Fill each character: For each character, evaluate each curve as many times \
+as necessary to create a smooth polygon. (This involves creating your own \
+evaluation routine.)\n \n ",
+ StyleBox["Turn in:",
+  FontWeight->"Bold"],
+ "\n -- ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " notebook -- your code below this homework description.\n -- Don\
+\[CloseCurlyQuote]t forget to add your name to the file.\n -- In the \
+notebook, there should be:\n *)  One plot with the Bezier polygons and curves \
+plotted together.\n *)  One plot with the curves plotted and the font filled. \
+\n *) A de Casteljau routine for evaluating a Bezier curve at a given \
+parameter and a routine that loads the points into a polygon data structure\n \
+-- Be sure that your code has comments\n\n\n"
+}], "Subsubtitle",
+ CellChangeTimes->{{3.5884598245656333`*^9, 3.588459826281636*^9}, {
+  3.588459884220138*^9, 3.5884600070859537`*^9}, {3.588460065539256*^9, 
+  3.5884600739008713`*^9}, {3.5884601092817335`*^9, 3.588460116192545*^9}, {
+  3.5884601537418113`*^9, 3.5884603303185215`*^9}, {3.588460378569406*^9, 
+  3.588460671537921*^9}, {3.5884664366650467`*^9, 3.588466446477464*^9}, {
+  3.588466542324033*^9, 3.588466549983646*^9}, {3.588466604287341*^9, 
+  3.588466649823821*^9}, {3.5884988562197123`*^9, 3.588498861211721*^9}, {
+  3.588498932784647*^9, 3.588498963906701*^9}, {3.5884989974779606`*^9, 
+  3.588498998445162*^9}, {3.588499047242048*^9, 3.5884990594880695`*^9}, {
+  3.588499198702714*^9, 3.5884992686688366`*^9}}]
+}, Open  ]]
+},
+WindowSize->{929, 630},
+WindowMargins->{{Automatic, 68}, {Automatic, 24}},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 328, 8, 135, "Subtitle"],
+Cell[910, 32, 328, 7, 67, "Subsubtitle"],
+Cell[1241, 41, 2904, 49, 660, "Subsubtitle"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
